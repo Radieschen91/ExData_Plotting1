@@ -8,7 +8,7 @@ hpc_sub <- read.table("household_power_consumption.txt", header = T, sep = ";") 
   mutate(DateTime = strptime(paste(Date, Time, sep =""), "%d/%m/%Y %H:%M:%S")) %>%
   ### delete Date and Time
   select(-Date, -Time)%>%
-  ### change type   
+  ### change object type   
   mutate_at(vars(c(1:6)), as.numeric)
 
 ### plot
